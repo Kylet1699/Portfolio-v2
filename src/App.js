@@ -6,6 +6,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 
 // Components
 import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+
+// icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
   const [tab, setTab] = useState('home');
@@ -18,8 +23,11 @@ function App() {
     <div className="App">
       <header className="header">
         <div className="header-left">
-          <span className="text-lg font-medium text-lightOrange">Kyle Tseng</span>
-          <span className="text-xs text-muted-foreground">Full Stack Developer</span>
+          <span className="logo max-w-10">曾</span>
+          <div className="flex flex-col items-start pl-3">
+            <span className="text-lg font-medium">Kyle Tseng</span>
+            <span className="text-xs text-muted-foreground">Full Stack Developer</span>
+          </div>
         </div>
         <Tabs defaultValue="home" className="header-middle w-[400px]">
           <TabsList>
@@ -31,10 +39,15 @@ function App() {
             </TabsTrigger>
           </TabsList>
         </Tabs>
-        <div></div>
+        <div className="header-right">
+          <FontAwesomeIcon icon={faGithub} className="text-3xl" />
+          <FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
+        </div>
       </header>
 
       <About />
+
+      <Projects />
       {/* 
       <h1>This is Ubuntu font in #cacaca</h1>
       <h2>This is also Ubuntu font in #cacaca</h2>
