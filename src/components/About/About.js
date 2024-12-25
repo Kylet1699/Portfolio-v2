@@ -9,7 +9,7 @@ function About({ ...props }) {
         full stack developer based in <span className="text-lightOrange">vancouver</span>
       </div>
       <div className="text-xl text-body flex flex-row items-center gap-1.5">
-        <div class="circle"></div>
+        <div className="circle"></div>
         open to work
       </div>
     </div>
