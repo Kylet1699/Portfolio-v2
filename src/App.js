@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 // Shadcn
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 
 // Components
 import About from './components/About/About';
+import Tech from './components/Tech/Tech';
 import Projects from './components/Projects/Projects';
+import Experience from './components/Experience/Experience';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +31,7 @@ function App() {
             <span className="text-xs text-muted-foreground">Full Stack Developer</span>
           </div>
         </div>
-        <Tabs defaultValue="home" className="header-middle w-[400px]">
+        {/* <Tabs defaultValue="home" className="header-middle w-[400px]">
           <TabsList>
             <TabsTrigger value="home" onClick={() => setTab('home')}>
               Home
@@ -38,7 +40,7 @@ function App() {
               Work
             </TabsTrigger>
           </TabsList>
-        </Tabs>
+        </Tabs> */}
         <div className="header-right">
           <FontAwesomeIcon icon={faGithub} className="text-3xl" />
           <FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
@@ -46,7 +48,11 @@ function App() {
       </header>
 
       <About />
-
+      <p className="section-title">Experience</p>
+      <Experience />
+      <p className="section-title">Tech</p>
+      <Tech />
+      <p className="section-title">Projects</p>
       <Projects />
       {/* 
       <h1>This is Ubuntu font in #cacaca</h1>

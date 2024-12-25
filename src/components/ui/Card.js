@@ -15,8 +15,8 @@ function Card({ ...props }) {
   return (
     <div className="card">
       <div className="glass-cover">
-        <p className="text-2xl font-medium">{props.title}</p>
-        <p className="text-lg">{props.description}</p>
+        <p className="text-2xl font-semibold">{props.title}</p>
+        <p className="text-xl font-medium">{props.description}</p>
       </div>
       <img src={props.coverImage} style={{ objectPosition: `${props.coverImagePosition}` }} />
     </div>
